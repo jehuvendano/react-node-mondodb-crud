@@ -4,7 +4,6 @@ const initialState = {
   status: '',
   message: '',
 }
-
 export default function(state = initialState, action){
   switch(action.type){
     case FORM_SUBMIT_FAIL:
