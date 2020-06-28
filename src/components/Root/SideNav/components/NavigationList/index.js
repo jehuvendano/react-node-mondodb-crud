@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import ListIcon from '@material-ui/icons/List';
 import List, { ListSubheader, ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-
 import './style.scss';
 
 const NavigationList = props => {

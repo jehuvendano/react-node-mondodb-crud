@@ -41,27 +41,24 @@ class _AppBar extends Component {
     this.handleMenuClose();
     this.props.logout();
   }
-
   handleMenu = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
-
   handleMenuClose = () => {
     this.setState({ anchorEl: null });
   };
 
   handleToggleDialog = () => {
     this.setState(prevState => ({
-        dialogOpen: !prevState.dialogOpen,
-      })
+      dialogOpen: !prevState.dialogOpen,
+    })
     )
   }
-  
+
   render() {
     const { classes, user } = this.props;
     const { anchorEl } = this.state;
     const open = !!anchorEl;
-
     return (
       <AppBar position="absolute" className={[classes.appBar, 'appBar'].join(' ')}>
         <Toolbar>
@@ -74,8 +71,7 @@ class _AppBar extends Component {
               aria-haspopup="true"
               onClick={this.handleMenu}
               color="inherit"
-              src=""
-            >
+              src="">
               <Avatar alt="Remy Sharp" src={user.profile} />
             </IconButton>
             <Menu
@@ -90,8 +86,7 @@ class _AppBar extends Component {
                 vertical: 'top',
                 horizontal: 'right',
               }}
-              open={open}
-            >
+              open={open}>
               <MenuItem onClick={this.handleMenuClose} component={NavLink} to="/profile">
                 Perfil
               </MenuItem>
